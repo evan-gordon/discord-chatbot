@@ -1,0 +1,77 @@
+{
+  "greetings": {
+    "default": [
+      {
+        "text": "Hi",
+        "args": []
+      },
+      {
+        "text": "hey",
+        "args": []
+      },
+      {
+        "text": "yo",
+        "args": []
+      },
+      {
+        "text": "*nods",
+        "args": []
+      },
+      {
+        "text": "hi there",
+        "args": []
+      },
+      {
+        "text": "hello",
+        "args": []
+      },
+      {
+        "text": "what can i do for you?",
+        "args": []
+      }
+    ]
+  },
+  "turnLightOn": {
+    "room": [
+      {
+        "text": "Turning lights on in the {slot_value}",
+        "args": [
+          "slot_value"
+        ]
+      },
+      {
+        "text": "Turning the lights on in the {slot_value}",
+        "args": [
+          "slot_value"
+        ]
+      }
+    ]
+  },
+  "turnLightOff": {
+    "room": [
+      {
+        "text": "Turning lights off in the {slot_value}",
+        "args": [
+          "slot_value"
+        ]
+      },
+      {
+        "text": "Turning the lights off in the {slot_value}",
+        "args": [
+          "slot_value"
+        ]
+      }
+    ]
+  },
+  "predictWeather": {
+    "location": [
+      {
+        "text": "It is currently {temperature} degrees and {weather} in {slot_value}",
+        "args": [
+          "slot_value",
+          "get_weather"
+        ]
+      }
+    ]
+  }
+}

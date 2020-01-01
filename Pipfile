@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[[source]]
+name = "github"
+url = "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/evan-gordon/mastermind.git"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+discord-py = "*"
+yapf = "*"
+flake8 = "*"
+mastermind = {editable = true,index = "github"}
+nltk = "*"
+
+[requires]
+python_version = "3.7"
