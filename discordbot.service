@@ -1,0 +1,15 @@
+[Unit]
+Description=Bot for interaction through discord client
+After=network.target
+
+[Service]
+User=<user_name>
+Type=simple
+Restart=always
+WorkingDirectory=<path_to>/discord-chatbot
+Environment="OWM_API_KEY=<owm_key>"
+Environment="DISCORD_BOT_KEY=<discord_key>"
+ExecStart=<path_to>/discord-chatbot/startup.sh
+
+[Install]
+WantedBy=multi-user.target

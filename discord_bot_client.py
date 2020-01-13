@@ -1,4 +1,4 @@
-import discord, mastermind, os
+import discord, mastermind, os, sys
 from discord.ext.commands import Bot
 from functools import reduce
 
@@ -26,7 +26,7 @@ async def on_message(message):
     return
   elif message.content.startswith('>'):
     await bot.process_commands(message)
-  elif message.content.startswith(f'<@!{bot.user.id}>'):
+  elif message.content.startswith(f'<@!{bot.user.id}>') or message.content.startswith(f'<@{bot.user.id}>'):
     updated_msg = message.content.replace(f'<@!{bot.user.id}>', '')
     print(updated_msg)
     reply = brain.respond(updated_msg)
@@ -37,5 +37,11 @@ async def on_message(message):
     # print(bot.commands())
     await message.channel.send(reply)
 
-discord_key = os.environ.get('DISCORD_BOT_KEY')
-bot.run(discord_key)
+print("Starting bot...")
+try:
+    discord_key = os.environ.get('DISCORD_BOT_KEY')
+    bot.run(discord_key)
+except:
+    e = sys.exc_info()[0]
+    print(str(e))
+print("Shutting down...")
