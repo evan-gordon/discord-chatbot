@@ -141,6 +141,24 @@
         }
       ]
     },
+    "tossCoin": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Toss a coin"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "flip a coin"
+            }
+          ]
+        }
+      ]
+    },
     "setLightColor": {
       "utterances": [
         {

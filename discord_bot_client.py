@@ -1,9 +1,17 @@
-import discord, mastermind, os, sys
+import discord, mastermind, os, sys, random
 from discord.ext.commands import Bot
 from functools import reduce
 
+def toss_coin(*args, results):
+  coin_sides = ["heads", "tails"]
+  random.shuffle(coin_sides)
+  print(coin_sides)
+  result = random.choice(coin_sides)
+  results["coin_side"] = result
+
 bot = Bot(command_prefix='>')
 brain = mastermind.Brain()
+brain.set_entity_function("toss_coin", toss_coin)
 
 @bot.event
 async def on_ready():
