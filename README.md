@@ -27,40 +27,31 @@ python -m snips_nlu download en
 
 # setup the bot framework and bot
 python train.py
+
+# run
+python discord_bot_client.py
 ```
 
-### Booting at startup
+If you want to run this as a startup service see:
 
-replace all `<>` tags in `discordbot.service` as well as `startup.sh`
-
-```bash
-# run from project directory
-# add service file to systemd services
-cp discordbot.service /lib/systemd/system/
-
-# enabling / running service commands
-systemctl start discordbot
-systemctl stop discordbot
-systemctl enable discordbot
-
-# checkinglogs
-systemctl status -n10 discordbot
-journalctl -u discordbot.service -b
-```
-
-Note:
-the service file tells systemd to call this projects `startup.sh` file. both files must be configured correctly for this to work
+[run_as_service.md](./run_as_service.md)
 
 ## Future Plans
 
 * research swapping BERT for snips-nlu <https://nbviewer.jupyter.org/github/m2dsupsdlclass/lectures-labs/blob/master/labs/06_deep_nlp/Transformers_Joint_Intent_Classification_Slot_Filling_rendered.ipynb>
 * in train make sure /data/models dir exists
 
+* die roll
+* daily news link
+* stonk info?
+
 ## Discord bot notes
 
 token can be generated at:
 
 <https://discordpy.readthedocs.io/en/latest/discord.html#discord-intro>
+
+Navigate to the `Bot` page, to retrieve or generate a new token.
 
 ## Before Commits
 

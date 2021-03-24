@@ -50,6 +50,6 @@ try:
     discord_key = os.environ.get('DISCORD_BOT_KEY')
     bot.run(discord_key)
 except:
-    e = sys.exc_info()[0]
+    e = sys.exc_info()
     print(str(e))
 print("Shutting down...")
