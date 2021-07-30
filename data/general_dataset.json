@@ -115,6 +115,18 @@
         {
           "data": [
             {
+              "text": "What is the weather like in "
+            },
+            {
+              "entity": "location",
+              "slot_name": "location",
+              "text": "Seattle"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
               "text": "Is it cold in "
             },
             {

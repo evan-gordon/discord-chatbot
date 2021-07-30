@@ -29,7 +29,7 @@ python -m snips_nlu download en
 python train.py
 
 # run
-python discord_bot_client.py
+python main.py
 ```
 
 If you want to run this as a startup service see:
@@ -44,8 +44,9 @@ If you want to run this as a startup service see:
 * die roll
 * daily news link
 * stonk info?
+* move from pipenv to poetry
 
-## Discord bot notes
+## Discord Bot API Notes
 
 token can be generated at:
 
