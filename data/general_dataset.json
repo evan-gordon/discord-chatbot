@@ -26,15 +26,26 @@
       "data": [
         {
           "value": "berkley",
-          "synonyms": []
+          "synonyms": [
+            "Berkley"
+          ]
         },
         {
           "value": "seattle",
-          "synonyms": []
+          "synonyms": [
+            "Seattle"
+          ]
         },
         {
           "value": "san francisco",
-          "synonyms": []
+          "synonyms": [
+            "San Francisco",
+            "san fran",
+            "sf"
+          ]
+        },
+        {
+          "value": "Redmond"
         }
       ],
       "matching_strictness": 1.0,
@@ -115,6 +126,18 @@
         {
           "data": [
             {
+              "text": "Whats the weather in "
+            },
+            {
+              "entity": "location",
+              "slot_name": "location",
+              "text": "Seattle"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
               "text": "Is it cold in "
             },
             {
@@ -136,6 +159,31 @@
             },
             {
               "text": " today?"
+            }
+          ]
+        }
+      ]
+    },
+    "coinToss": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Toss a coin"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "flip a coin"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "heads or tails?"
             }
           ]
         }

@@ -4,6 +4,7 @@ from functools import reduce
 
 bot = Bot(command_prefix='>')
 brain = mastermind.Brain()
+brain.
 
 @bot.event
 async def on_ready():
